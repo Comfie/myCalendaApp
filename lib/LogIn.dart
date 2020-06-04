@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterapp/RegisterPage.dart';
 
 class LogIn extends StatefulWidget {
   @override
@@ -32,7 +33,7 @@ class _LogInState extends State<LogIn> {
                   ),
                   filled: true,
                   hintStyle: TextStyle(color: Colors.grey),
-                  hintText: 'Email',
+                  hintText: 'Email Address',
                   fillColor: Colors.white70
               ),
             ),
@@ -55,24 +56,45 @@ class _LogInState extends State<LogIn> {
             ),
             SizedBox(height: 20.0,),
 
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0)
+                ),
+                onPressed: (){},
+                color: Colors.lightBlue,
+                child: Text('Log In',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+              ),
 
-            RaisedButton(
-              onPressed: (){},
-              color: Colors.lightBlue,
-              child: Text('Log In',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
             ),
+
 
             SizedBox(height: 20.0,),
 
-            Row(
+            //Allows you to detect clicks
+            GestureDetector(
+              onTap: (){
 
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text('Dont have an account?'),
-                Text('Sign Up Here',style: TextStyle(color: Colors.blueAccent),),
+                //push will  clear all previous pages, while push replacement takes a parameter
+                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Register()));
 
-              ],),
+
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text('Dont have an account?'),
+                  Text('Sign Up Here',style: TextStyle(color: Colors.blueAccent),),
+
+                ],),
+
+
+            )
+
+
+
 
 
 
