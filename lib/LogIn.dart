@@ -31,10 +31,11 @@ class _LogInState extends State<LogIn> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20.0))
                   ),
-                  filled: true,
+                  filled: false,
                   hintStyle: TextStyle(color: Colors.grey),
                   hintText: 'Email Address',
-                  fillColor: Colors.white70
+                  fillColor: Colors.white70,
+
               ),
             ),
 

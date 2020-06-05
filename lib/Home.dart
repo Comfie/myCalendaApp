@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterapp/DetailsPage.dart';
 
@@ -26,8 +27,8 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   ListTile(
                     leading: Icon(Icons.description),
-                    title: Text('Go to task'),
-                    subtitle: Text('a of 3 Tasks'),
+                    title: Text('Go do groceries'),
+                    subtitle: Text('1 of 3 Tasks'),
                   )
                 ],
               ),
@@ -37,8 +38,8 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
                   ListTile(
                     leading: Icon(Icons.description),
-                    title: Text('Go to task'),
-                    subtitle: Text('a of 3 Tasks'),
+                    title: Text('Go go for a jog'),
+                    subtitle: Text('2 of 3 Tasks'),
                   )
                 ],
               ),
@@ -50,7 +51,9 @@ class _HomeState extends State<Home> {
         ),
         appBar: AppBar(
           title: Text('Home Page'),
-          actions: <Widget>[],
+          actions: <Widget>[
+
+          ],
           leading: Icon(Icons.calendar_today),
           bottom: TabBar(
             tabs: <Widget>[
